@@ -1,0 +1,641 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+svg {
+	max-width: 100%;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+input:focus {
+	outline: none;
+}
+
+body {
+	background-color: #212121;
+	color: #fff;
+	font-size: 16px;
+	line-height: 1.6;
+	font-weight: 400;
+	letter-spacing: 0.05em;
+	font-family: 'Open Sans', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: 40px;
+}
+
+h2 {
+	font-size: 26px;
+}
+
+h3 {
+	font-size: 22px;
+}
+
+h4 {
+	font-size: 18px;
+}
+
+.cf:before,
+.cf:after {
+	content: " ";
+	/* 1 */
+	display: table;
+	/* 2 */
+}
+
+.cf:after {
+	clear: both;
+}
+
+.cf {
+	*zoom: 1;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+	outline: 0;
+}
+
+#i {
+	display: block;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	top: 0;
+	left: -200px;
+}
+
+#i span {
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+}
+
+.wrapper {
+	width: 90%;
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+section {
+	padding: 40px 0 80px 0;
+}
+
+section h2 {
+	text-align: center;
+}
+
+section h3 {
+	text-transform: initial;
+}
+
+#menu {
+	width: 100%;
+	height: 40px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 9999;
+	background: rgba(235,91,65,1);
+	background: -moz-linear-gradient(left, rgba(235,91,65,1) 0%, rgba(222,44,145,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(235,91,65,1)), color-stop(100%, rgba(222,44,145,1)));
+	background: -webkit-linear-gradient(left, rgba(235,91,65,1) 0%, rgba(222,44,145,1) 100%);
+	background: -o-linear-gradient(left, rgba(235,91,65,1) 0%, rgba(222,44,145,1) 100%);
+	background: -ms-linear-gradient(left, rgba(235,91,65,1) 0%, rgba(222,44,145,1) 100%);
+	background: linear-gradient(to right, rgba(235,91,65,1) 0%, rgba(222,44,145,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb5b41', endColorstr='#de2c91', GradientType=1 );
+}
+
+#menu > ul {
+	list-style-type: none;
+	width: 100%;
+	float: left;
+}
+
+#menu > ul > li {
+	float: left;
+	width: 25%;
+}
+
+#menu > ul > li:last-child {
+	border-right: none;
+}
+
+#menu > ul > li > a {
+	float: left;
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	font-size: 12px;
+	line-height: 40px;
+	font-weight: bold;
+	text-transform: uppercase;
+	position: relative;
+	color: #212121;
+}
+
+#menu > ul > li > a:before {
+	content: '';
+	width: 100%;
+	height: 2px;
+	background-color: #212121;
+	position: absolute;
+	left: 0;
+	top: 2px;
+	-webkit-transform: scaleX(0);
+	-ms-transform: scaleX(0);
+	-o-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transform-origin: left;
+	-moz-transform-origin: left;
+	-ms-transform-origin: left;
+	-o-transform-origin: left;
+	transform-origin: left;
+	-webkit-transition: transform 0.2s linear;
+	-o-transition: transform 0.2s linear;
+	transition: transform 0.2s linear;
+}
+
+#menu > ul > li.active > a,
+#menu > ul > li > a:hover {
+	color: #ffffff;
+}
+#menu > ul > li.active > a:before {
+	-webkit-transform: scaleX(1);
+	-ms-transform: scaleX(1);
+	-o-transform: scaleX(1);
+	transform: scaleX(1);
+}
+#home {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	text-align: center;
+	display: table;
+}
+#home .titles {
+	display: table-cell;
+	vertical-align: middle;
+}
+#home .titles h2 {
+	margin-top: 5px;
+}
+#home .titles h5 {
+	font-size: 24px;
+	text-transform: initial;
+	margin-top: 30px;
+	background: rgba(235,91,65,1);
+	background: -moz-linear-gradient(left, rgba(235,91,65,1) 0%, rgba(222,44,145,1) 100%);
+	background: -webkit-gradient(left top, right top, color-stop(0%, rgba(235,91,65,1)), color-stop(100%, rgba(222,44,145,1)));
+	background: -webkit-linear-gradient(left, rgba(235,91,65,1) 0%, rgba(222,44,145,1) 100%);
+	background: -o-linear-gradient(left, rgba(235,91,65,1) 0%, rgba(222,44,145,1) 100%);
+	background: -ms-linear-gradient(left, rgba(235,91,65,1) 0%, rgba(222,44,145,1) 100%);
+	background: linear-gradient(to right, rgba(235,91,65,1) 0%, rgba(222,44,145,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb5b41', endColorstr='#de2c91', GradientType=1 );
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+#about h3 {
+	margin-bottom: 30px;
+}
+#about .timeline_wrapper {
+	padding: 100px 0;
+	position: relative;
+}
+#about .timeline_rail {
+	height: 2px;
+	position: relative;
+	background: rgba(235,91,65,1);
+    background: -moz-linear-gradient(left, rgba(235,91,65,1) 0%, rgba(222,44,145,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(235,91,65,1)), color-stop(100%, rgba(222,44,145,1)));
+    background: -webkit-linear-gradient(left, rgba(235,91,65,1) 0%, rgba(222,44,145,1) 100%);
+    background: -o-linear-gradient(left, rgba(235,91,65,1) 0%, rgba(222,44,145,1) 100%);
+    background: -ms-linear-gradient(left, rgba(235,91,65,1) 0%, rgba(222,44,145,1) 100%);
+    background: linear-gradient(to right, rgba(235,91,65,1) 0%, rgba(222,44,145,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eb5b41', endColorstr='#de2c91', GradientType=1 );
+}
+#about .timeline_dot {
+	height: 45px;
+	width: 18%;
+	position: absolute;
+	top: -10px;
+	color: #474747;
+	cursor: pointer;
+}
+#about .timeline_dot i {
+	width: 20px;
+	height: 20px;
+	margin-left: 10px;
+	border: 2px solid #474747;
+	border-radius: 50%;
+	background-color: #212121;
+	display: block;
+	position: relative;
+	z-index: 2;
+}
+#about .timeline_dot.active {
+	color: #fff;
+	transition: all 0.2s ease-in-out;
+}
+#about .timeline_dot i.active {
+	border-color: #fff;
+	transition: all 0.2s ease-in-out;
+}
+#about .timeline_dot em.active {
+	opacity: 1;
+	transition: all 0.2s ease-in-out;
+}
+#about .timeline_dot em {
+	content: '';
+	width: calc(100% - 10px);
+	height: 2px;
+	background-color: #fff;
+	position: absolute;
+	top: 10px;
+	left: 20px;
+	opacity: 0;
+}
+#about .timeline_dot.one {
+	left: 12%;
+	width: 24%;
+}
+#about .timeline_dot.two {
+	left: 36%;
+}
+#about .timeline_dot.three {
+	left: 54%;
+}
+#about .timeline_dot.four {
+	left: 72%;
+}
+#about .timeline_dot.five {
+	left: 90%;
+	width: 10%;
+}
+#about .timeline_dot.two,
+#about .timeline_dot.five {
+	top: -34px;
+}
+#about .timeline_dot.two em,
+#about .timeline_dot.five em {
+	top: 34px;
+}
+#about .timeline_dot.five em {
+	width: calc(100% - 20px);
+}
+#about .timeline_dot.three em {
+	content: none;
+}
+#about .timeline_wrapper ul li {
+	position: absolute;
+	color: #474747;
+}
+#about .timeline_wrapper ul li.active {
+	color: #fff;
+	transition: all 0.2s ease-in-out;
+}
+#about .timeline_wrapper ul li span {
+	display: none;
+}
+#about .timeline_wrapper ul li.one {
+	top: 44px;
+	left: 0;
+}
+#about .timeline_wrapper ul li.two {
+	top: 134px;
+	left: 19%;
+}
+#about .timeline_wrapper ul li.four {
+	top: 16px;
+	left: 54%;
+}
+#about .timeline_wrapper ul li.five {
+	top: 160px;
+	right: 0;
+}
+#about .jobs li {
+	float: left;
+	width: 32%;
+	background: #ccc;
+	border-radius: 4px;
+	color: #212121;
+	font-size: 14px;
+	line-height: 20px;
+	padding: 5px;
+	transition: all 0.2s ease-in-out;
+}
+#about .jobs li:hover {
+    box-shadow: 0 5px 11px 0 rgba(0,0,0,0.6),0 4px 15px 0 rgba(0,0,0,0.4);
+    background: #e8e8e8;
+}
+#about .jobs li:nth-child(3n+2) {
+	margin: 0 2%;
+}
+#about .jobs li img {
+	float: left;
+	margin-right: 10px;
+	border-radius: 4px;
+	height: 80px;
+}
+#about .jobs li p:first-of-type {
+	margin-top: 10px;
+}
+#about .jobs li p:nth-of-type(2) {
+	font-weight: bold;
+}
+#about h3,
+#work h3 {
+    margin-top: 60px;
+}
+#work li {
+	width: 30%;
+	float: left;
+	margin-top: 40px;
+}
+#work li:nth-child(3n+2) {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+#work li a {
+	display: block;
+	position: relative;
+	overflow: hidden;
+}
+#work li a img {
+	width: 100%;
+	display: block;
+}
+#work li a:hover span {
+    bottom: 0;
+}
+#work li a span {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -35px;
+	background-color: rgba(0,0,0,0.5);
+	color: #fff;
+	padding: 5px 10px;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	transition: all 0.2s ease-in-out;
+}
+#contact {
+	padding-bottom: 120px;
+}
+#contact .social-content {
+	margin-top: 60px;
+	text-align: center;
+}
+#contact .social-content li {
+    display: inline-block;
+    margin: 0 20px;
+}
+#contact .social-content li a {
+	font-size: 30px;
+}
+.resume {
+	width: 800px;
+	max-width: 100%;
+	margin: 80px auto;
+}
+.resume h1, .resume h3 {
+	width: 60%;
+	display: inline-block;
+	letter-spacing: 0.05em;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	border-bottom: 1px dashed #3e3e3e;
+}
+.resume h3 {
+	font-size: 24px;
+}
+.resume i {
+	width: 30px;
+}
+.resume a {
+	text-decoration: underline;
+	word-break: break-all;
+	color: #212121;
+}
+.resume span {
+	width: 180px;
+	display: inline-block;
+}
+.resume p.margbot {
+	margin-bottom: 20px;
+}
+.resume em {
+	font-style: italic;
+}
+.resume b {
+	font-weight: bold;
+}
+.resume blockquote {
+	display: block;
+	margin-bottom: 20px;
+	font-style: italic;
+}
+.resume .section {
+	margin-bottom: 60px;
+}
+.resume .col {
+	width: 49%;
+	display: inline-block;
+	margin-bottom: 20px;
+}
+.resume ul {
+	margin: 10px 0;
+	list-style-type: circle;
+	margin-left: 20px;
+}
+
+.down-cv {
+	width: 50px;
+	height: 50px;
+	border: 1px solid #3e3e3e;
+	background: #3e3e3e;
+	color: #fff;
+	border-radius: 50%;
+	display: inline-block;
+	text-align: center;
+	line-height: 50px;
+	position: fixed;
+	top: 100px;
+	right: 100px;
+	z-index: 999;
+}
+.down-cv span {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 10%;
+	color: #3e3e3e;
+	line-height: 1;
+	height: 34px;
+	margin: auto;
+	padding: 2px 10px;
+	opacity: 0;
+	z-index: -1;
+}
+.down-cv:hover {
+	-webkit-box-shadow: 0 0 21px -6px #3e3e3e;
+	box-shadow: 0 0 21px -6px #3e3e3e;
+}
+.down-cv:hover span {
+	display: inline-block;
+	right: 100%;
+	opacity: 1;
+	z-index: 999;
+}
+@media only screen and (max-width: 1270px) {
+	.down-cv {
+		top: 35px;
+		right: 50px;
+	}
+}
+@media screen and (max-width: 960px) {
+	#about .timeline_wrapper {
+		padding: 0;
+	}
+	#about .timeline_wrapper ul li {
+		position: static;
+		color: #fff;
+		margin-left: 0;
+	}
+	#about .timeline_wrapper ul li span {
+		display: inline;
+	}
+	#about .timeline_rail {
+		display: none;
+	}
+	#i {
+		top: -100px;
+		left: auto;
+		right: 0;
+	}
+	#about .jobs li:nth-child(3n+2) {
+		margin: 0;
+	}
+	#about .jobs li {
+		width: 47.5%;
+		margin-top: 20px;
+	}
+	#about .jobs li:first-child {
+		margin-top: 0;
+	}
+	#about .jobs li:nth-child(2n) {
+		margin-left: 5%;
+	}
+	#work li:nth-child(3n+2) {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	#work li {
+		width: 47.5%;
+	}
+	#work li:nth-child(2n) {
+		margin-left: 5%;
+	}
+	#work li a span {
+		bottom: 0;
+	}
+	.resume h1, .resume h3 {
+		width: 90%;
+	}
+}
+@media screen and (max-width: 640px) {
+	#about .jobs li {
+		width: 100%;
+	}
+	#about .jobs li:nth-child(2n) {
+		margin-left: 0;
+		margin-top: 20px;
+	}
+}
+@media screen and (max-width: 480px) {
+	section {
+		padding: 30px 0;
+	}
+	#about h3, #work h3 {
+		margin-top: 30px;
+	}
+	#work li {
+		width: 100%;
+	}
+	#work li:nth-child(2n) {
+		margin-left: 0;
+	}
+	#contact {
+		padding-bottom: 100px;
+	}
+	#contact .social-content {
+		margin-top: 30px;
+	}
+	#contact .social-content li {
+		margin: 0 8px;
+	}
+	.resume h1 {
+		font-size: 34px;
+	}
+
+	.resume span {
+		width: 150px;
+	}
+
+	.resume .col {
+		width: 100%;
+	}
+}
